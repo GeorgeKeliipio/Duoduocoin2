@@ -31,7 +31,7 @@ bool BitcoinUnits::valid(int unit)
 //œ‘ æ
 QString BitcoinUnits::baseName(unsigned char baseUnit)
 {
-	printf("Set to:%c\n",baseUnit);
+//	printf("Set to:%c\n",baseUnit);
     switch (baseUnit)
     {
         case 'S':
