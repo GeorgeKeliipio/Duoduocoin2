@@ -149,9 +149,9 @@ static void handleRunawayException(std::exception *e)
 #ifndef BITCOIN_QT_TEST
 int main(int argc, char *argv[])
 {
-	argc = 2;
-	*((argv + 0) + 0) = "DuoDuoAssets.exe";
-	*((argv + 1) + 0) = "-datadir=DDA" ;
+//	argc = 2;
+//	*((argv + 0) + 0) = "DuoDuoAssets.exe";
+//	*((argv + 1) + 0) = "-datadir=DDA" ;
 #if !defined(MAC_OSX) && !defined(WIN32)
 // TODO: implement qtipcserver.cpp for Mac and Windows
 

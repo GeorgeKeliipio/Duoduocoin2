@@ -113,7 +113,12 @@ void HandleSIGTERM(int)
 #if !defined(QT_GUI)
 int main(int argc, char* argv[])
 {
-    bool fRet = false;
+ 
+//	argc = 2;
+//	*((argv + 0) + 0) = "--daemon";
+//	*((argv + 1) + 0) = "-addnode=120.25.147.12" ;
+
+   bool fRet = false;
     fRet = AppInit(argc, argv);
 
     if (fRet && fDaemon)

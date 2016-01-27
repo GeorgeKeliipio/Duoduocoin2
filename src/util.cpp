@@ -905,7 +905,7 @@ boost::filesystem::path GetDefaultDataDir()
     return pathRet / "Nu";
 #else
     // Unix
-    return pathRet / ".nu";
+    return pathRet / ".DDAssets";
 #endif
 #endif
 }
