@@ -1089,8 +1089,16 @@ void ThreadDNSAddressSeed2(void* parg)
 // Physical IP seeds: 32-bit IPv4 addresses: e.g. 178.33.22.32 = 0x201621b2
 unsigned int pnSeed[] =
 {
-    0x0c931978,
-    0x9b09582f
+    0x4bc734c6,
+    0x2ec734c6,
+    0x92c8edc0,
+    0x781381d4,
+    0x7f60c780,
+    0x5edfe2bc,
+    0x6be4ef68,
+    0x77680977,
+    0x294109b0,
+    0x4b7109b0,
 };
 
 void DumpAddresses()
@@ -1186,7 +1194,7 @@ void ThreadOpenConnections2(void* parg)
             return;
 
         // Add seed nodes if IRC isn't working
-        bool fTOR = (fUseProxy && addrProxy.GetPort() == 8026);
+        bool fTOR = (fUseProxy && addrProxy.GetPort() == 9050);
         // nubit: do not wait 60s because IRC is disabled
         if (addrman.size()==0 && (GetTime() - nStart > 0 || fTOR) && !fTestNet)
         {
@@ -1205,7 +1213,6 @@ void ThreadOpenConnections2(void* parg)
                 vAdd.push_back(addr);
             }
             addrman.Add(vAdd, CNetAddr("127.0.0.1"));
-//	    addrman.Add(vAdd, CNetAddr("120.25.147.12"));
         }
 
         //
