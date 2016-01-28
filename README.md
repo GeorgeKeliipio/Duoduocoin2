@@ -1,13 +1,13 @@
 
-duoduo Official Development Repo
+Nu Official Development Repo
 ==================================
 
-### What is duoduo?
+### What is Nu?
 //todo: Description to be written
 
-### duoduo Resources
+### Nu Resources
 * Client and Source: Client Binaries, Source Code
-* Documentation: duoduo Whitepaper, duoduo Wiki
+* Documentation: Nu Whitepaper, Nu Wiki
 * Help: Forum, Report an Issue
 
 # Repo Guidelines
