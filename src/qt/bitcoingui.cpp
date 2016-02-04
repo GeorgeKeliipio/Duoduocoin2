@@ -82,7 +82,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
 {
     resize(850, 550);
 //    setWindowTitle(tr("Nu"));
-    setWindowTitle(tr("DD Assets"));
+    setWindowTitle(tr("duoduocoin 2"));
     setStyle(QStyleFactory::create("cleanlooks"));
 #ifndef Q_WS_MAC
     setWindowIcon(QIcon(":icons/nu"));
@@ -279,19 +279,19 @@ void BitcoinGUI::createActions()
     quitAction->setMenuRole(QAction::QuitRole);
     aboutAction = new QAction(QIcon(":/icons/ppcoin"), tr("&About %1").arg(qApp->applicationName()), this);
 //    aboutAction->setToolTip(tr("Show information about Nu"));
-    aboutAction->setToolTip(tr("Show information about DD Dollar"));
+    aboutAction->setToolTip(tr("Show information about mushroom coin"));
     aboutAction->setMenuRole(QAction::AboutRole);
     aboutQtAction = new QAction(tr("About &Qt"), this);
     aboutQtAction->setToolTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
     optionsAction = new QAction(QIcon(":/icons/options"), tr("&Options..."), this);
 //    optionsAction->setToolTip(tr("Modify configuration options for Nu"));
-    optionsAction->setToolTip(tr("Modify configuration options for DD Dollar"));
+    optionsAction->setToolTip(tr("Modify configuration options for mushroom coin"));
     optionsAction->setMenuRole(QAction::PreferencesRole);
 //    toggleHideAction = new QAction(QIcon(":/icons/ppcoin"), tr("Show/Hide &Nu"), this);
     toggleHideAction = new QAction(QIcon(":/icons/ppcoin"), tr("Show/Hide &DD Dollar"), this);
 //    toggleHideAction->setToolTip(tr("Show or hide the Nu window"));
-    toggleHideAction->setToolTip(tr("Show or hide the DD Dollar window"));
+    toggleHideAction->setToolTip(tr("Show or hide the mushroom coin window"));
     exportAction = new QAction(QIcon(":/icons/export"), tr("&Export..."), this);
     exportAction->setToolTip(tr("Export the data in the current tab to a file"));
     encryptWalletAction = new QAction(QIcon(":/icons/lock_closed"), tr("&Encrypt Portfolio"), this);
@@ -526,12 +526,12 @@ void BitcoinGUI::setWalletModel(WalletModel *walletModel)
         {
             switchUnitTarget = "B";
 //            switchUnitAction->setText(tr("NuBits"));
-            switchUnitAction->setText(tr("DD Dollar"));
+            switchUnitAction->setText(tr("mushroom coin"));
         }
         else
         {
             switchUnitTarget = "S";
-            switchUnitAction->setText(tr("DD Shares"));
+            switchUnitAction->setText(tr("duoduocoin 2"));
         }
     }
 }
@@ -564,7 +564,7 @@ void BitcoinGUI::createTrayIcon()
     trayIconMenu = new QMenu(this);
     trayIcon->setContextMenu(trayIconMenu);
 //    trayIcon->setToolTip(tr("Nu client"));
-    trayIcon->setToolTip(tr("DDA client"));
+    trayIcon->setToolTip(tr("DDC2 client"));
     trayIcon->setIcon(QIcon(":/icons/toolbar"));
     connect(trayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
             this, SLOT(trayIconActivated(QSystemTrayIcon::ActivationReason)));
@@ -593,7 +593,7 @@ void BitcoinGUI::createTrayIcon()
 #endif
 
 //    notificator = new Notificator(tr("Nu-qt"), trayIcon);
-	notificator = new Notificator(tr("DD Dollar-qt"), trayIcon);
+	notificator = new Notificator(tr("mushroom coin-qt"), trayIcon);
 }
 
 #ifndef Q_WS_MAC
@@ -1080,7 +1080,7 @@ void BitcoinGUI::exportPeercoinKeys()
 {
     QMessageBox::StandardButton reply;
 
-    QString sQuestion = tr("All your DD Shares private keys will be converted to Peercoin private keys and imported into your Peercoin wallet.\n\nThe Peercoin wallet must be running, unlocked (if it was encrypted) and accept RPC commands.\n\nThis process may take several minutes because Peercoin will scan the blockchain for transactions on all the imported keys.\n\nDo you want to proceed?");
+    QString sQuestion = tr("All your duoduocoin 2 private keys will be converted to Peercoin private keys and imported into your Peercoin wallet.\n\nThe Peercoin wallet must be running, unlocked (if it was encrypted) and accept RPC commands.\n\nThis process may take several minutes because Peercoin will scan the blockchain for transactions on all the imported keys.\n\nDo you want to proceed?");
     reply = QMessageBox::warning(this, tr("Peercoin keys export confirmation"), sQuestion, QMessageBox::Yes | QMessageBox::No);
     if (reply != QMessageBox::Yes)
         return;

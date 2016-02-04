@@ -31,15 +31,15 @@ bool BitcoinUnits::valid(int unit)
 //œ‘ æ
 QString BitcoinUnits::baseName(unsigned char baseUnit)
 {
-//	printf("Set to:%c\n",baseUnit);
+	printf("Set to:%c\n",baseUnit);
     switch (baseUnit)
     {
         case 'S':
 //            return QString("NuShares");
-            return QString("DD Shares");
+            return QString("duoducoin 2");
         case 'B':
 //            return QString("NuBits");
-            return QString("DD Dollar");
+            return QString("mushroom coin");
         default:
             return QString("???");            
             //return QString("DDS");
@@ -57,13 +57,13 @@ QString BitcoinUnits::name(int unit)
             switch(unit)
             {
 //                case BTC: return QString("DDS");
-                case BTC: return QString("DDS");
+                case BTC: return QString("DDC2");
             }
         case 'B':
             switch(unit)
             {
 //                case BTC: return QString("NBT");
-                case BTC: return QString("DDD");
+                case BTC: return QString("MRC");
             }
     }
 	return QString("???");
@@ -77,13 +77,13 @@ QString BitcoinUnits::description(int unit)
         case 'S':
             switch(unit)
             {
-                case BTC: return QString("DD Shares");
+                case BTC: return QString("duoduocoin 2");
             }
         case 'B':
             switch(unit)
             {
 //                case BTC: return QString("NuBits");
-                case BTC: return QString("DD Dollar");
+                case BTC: return QString("mushroom coin");
             }
 			
     }

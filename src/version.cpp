@@ -13,7 +13,7 @@
 const std::string CLIENT_NAME("Siglee");
 
 // Client version number
-#define CLIENT_VERSION_SUFFIX   "-beta(MingLang:DDA:8026); DuoDuoCoin dev(QQ:59974015); DuoDuoAssets dev(QQ:535315491);QQ Group:136955107"
+#define CLIENT_VERSION_SUFFIX   "DuoDuoCoin 2 v1.0.0-dds-beta;QQ Group:136955107"
 
 
 // The following part of the code determines the CLIENT_BUILD variable.

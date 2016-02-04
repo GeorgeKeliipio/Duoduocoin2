@@ -149,9 +149,7 @@ static void handleRunawayException(std::exception *e)
 #ifndef BITCOIN_QT_TEST
 int main(int argc, char *argv[])
 {
-//	argc = 2;
-//	*((argv + 0) + 0) = "DuoDuoAssets.exe";
-//	*((argv + 1) + 0) = "-datadir=DDA" ;
+
 #if !defined(MAC_OSX) && !defined(WIN32)
 // TODO: implement qtipcserver.cpp for Mac and Windows
 
@@ -197,13 +195,13 @@ int main(int argc, char *argv[])
     // Application identification (must be set before OptionsModel is initialized,
     // as it is used to locate QSettings)
 //    app.setOrganizationName("Nu");
-    app.setOrganizationName("DD Dollar");
+    app.setOrganizationName("duoduocoin2");
     app.setOrganizationDomain("NuBits.com");
     if(GetBoolArg("-testnet")) // Separate UI settings for testnet
 //        app.setApplicationName("Nu-Qt-testnet");
 		app.setApplicationName("DD Dollar-Qt-testnet");
     else
-        app.setApplicationName("DD Dollar-Qt");
+        app.setApplicationName("duoduocoin2");
 //		app.setApplicationName("Nu-Qt");
 
     // ... then GUI settings:
